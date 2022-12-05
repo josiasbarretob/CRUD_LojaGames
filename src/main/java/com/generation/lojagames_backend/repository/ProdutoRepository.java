@@ -13,7 +13,7 @@ public interface ProdutoRepository extends JpaRepository<Produto, Long>{ //Produ
 	
 	public List <Produto> findAllByNomeContainingIgnoreCase(@Param("nome") String nome);
 
-	public Object findByPrecoGreaterThanOrderByPreco(float preco);
+	public List <Produto> findByPrecoGreaterThanOrderByPreco(float preco);
 	 
 	public List <Produto> findByPrecoLessThanOrderByPrecoDesc(float preco);
 }

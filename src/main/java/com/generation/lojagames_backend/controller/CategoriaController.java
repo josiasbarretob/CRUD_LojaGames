@@ -27,6 +27,7 @@ import com.generation.lojagames_backend.repository.CategoriaRepository;
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class CategoriaController {
 	
+	private Categoria categoria;
 	@Autowired
 	private CategoriaRepository categoriaRepository;
 	

@@ -96,13 +96,13 @@ public class ProdutoController {
 	
 	
 		@GetMapping("/preco_maior/{preco}")
-		public ResponseEntity<Object> getPrecoMaiorQue(@PathVariable float preco){ 
+		public ResponseEntity <List<Produto>> getPrecoMaiorQue(@PathVariable float preco){ 
 			return ResponseEntity.ok(produtoRepository.findByPrecoGreaterThanOrderByPreco(preco));
 		}
 		
 		
 		@GetMapping("/preco_menor/{preco}")
-		public ResponseEntity<List<Produto>> getPrecoMenorQue(@PathVariable float preco){ 
+		public ResponseEntity <List<Produto>> getPrecoMenorQue(@PathVariable float preco){ 
 			return ResponseEntity.ok(produtoRepository.findByPrecoLessThanOrderByPrecoDesc(preco));
 		}
 }
